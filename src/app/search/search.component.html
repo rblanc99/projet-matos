@@ -13,7 +13,7 @@
     <h4>Résultat de la recherche : </h4>
     <ul class="collection">
   
-      <app-appareil *ngFor = "let appareil of usersReq, let i = index" 
+      <app-appareil *ngFor = "let appareil of searchReq, let i = index" 
                     [name] = "appareil.nom" 
                     [status] = "appareil.statut" 
                     [index] = "i"
