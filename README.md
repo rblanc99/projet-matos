@@ -19,9 +19,10 @@ Node 8.11.3
 ### Back
 J'ai developpé un back en ExpressJS et MongoDB fonctionnel (testé avec Postman), malheureusement je n'ai pas réussi à contourner les problèmes de Cross-Origin Request malgré de longues recherches.
 Vous pouvez néanmoins le tester en suivant la procédure suivante : 
-1) ouvir deux nouveaux terminaux 
+1) Assurez vous d'avoir téléchargé MongoDB [https://www.mongodb.com/](https://www.mongodb.com/)
+2) Ouvir deux nouveaux terminaux 
 2) Dans le premier, executer les commandes suivantes : cd back, mongod
-3) dans le deuxième : cd back, npm install, npm start
+3) Dans le deuxième : cd back, npm install, npm start
 4) L'URL est : localhost:3000/products
 
 Faute de mieux, j'ai donc utilisé une BDD Firebase de Google, accessible en open à l'adresse suivante : [https://backend-projet-matos.firebaseio.com] (https://backend-projet-matos.firebaseio.com)
