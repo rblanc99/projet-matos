@@ -29,20 +29,13 @@ export class ListeUsersComponent implements OnInit {
     this.authService.addUser(newUser);
   }
 
-  onSaveUsers() {
-    this.authService.saveUsersToServer();
-  }
-
-  onFetchUsers() {
-    this.authService.getUsersFromServer();
-  }
-
   isAdmin() {
     return this.authService.isAdmin();
   }
 
   onDeleteUser(user) {
     this.authService.deleteUser(user.id);
+    this.isSearchOn = false;
   }
 
   onResearch(form) {

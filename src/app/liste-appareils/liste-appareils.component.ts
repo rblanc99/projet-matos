@@ -28,10 +28,6 @@ export class ListeAppareilsComponent implements OnInit {
     this.appareilService.toutEmprunter(this.currentUser.id);
   }
 
-  onReceive() {
-    this.appareilService.saveAppareilsToServer();
-  }
-
   getAuth() {
     return this.authService.getAuth();
   }
