@@ -12,7 +12,7 @@ Il offre la possibilité aux utilisateurs d'emprunter et de rendre du matériel.
 Ce site utilise les technologies suivantes :
 
 ### Front
-Angular 7.2.8  [https://angular.io/]((https://angular.io/)) (auto-generated with Angular CLI 7.3.4)
+Angular 7.2.8  [https://angular.io/](https://angular.io/) (auto-generated with Angular CLI 7.3.4)
 Framework CSS Materialize [https://materializecss.com/](https://materializecss.com/)
 Node 8.11.3 
 
