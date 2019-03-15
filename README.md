@@ -34,8 +34,9 @@ Par exemple [https://backend-projet-matos.firebaseio.com/appareils.json] (https:
  - Installer les node_modules avec npm install
  - Pour lancer l'application, executer la commande ng serve
  - Lancer votre navigateur et naviguez à l'URL [http://localhost://4200](http://localhost:4200)
-La BDD se charge toute seule depuis le web, **il faut donc être connecté à Internet** et attendre peut-être un peu selon la vitesse de votre connexion que la bdd se charge (le chargement est notifié dans la console une fois terminé)
-Il peut être nécessaire de recharger le component en changeant de page. Avec une bonne cennoxion tout cela n'est pas nécessaire.
+ 
+ La BDD se charge toute seule depuis le web, **il faut donc être connecté à Internet** et attendre peut-être un peu selon la vitesse de votre connexion que la bdd se charge (le chargement est notifié dans la console une fois terminé).
+Il peut être nécessaire de recharger le component en changeant de page. Avec une bonne connexion tout cela n'est pas nécessaire.
 
 ## Connexion
 
