@@ -38,6 +38,7 @@ export class AppareilService  {
                 appareil.statut = 1;
             }
         }
+        this.saveAppareilsToServer();
     }
 
     toutEmprunter(currentUserId) {
@@ -46,6 +47,7 @@ export class AppareilService  {
                 appareil.statut = 0;
                 appareil.emprunterId = currentUserId;
             }
+            this.saveAppareilsToServer();
         }
 
     }
@@ -53,12 +55,14 @@ export class AppareilService  {
     emprunter(index: number, emprunterId: number) {
         this.appareils[index].statut = 0;
         this.appareils[index].emprunterId = emprunterId;
+        this.saveAppareilsToServer();
     }
 
     rendre(index: number, rendeurId: number) {
 
             this.appareils[index].statut = 1;
             this.appareils[index].emprunterId = 0;
+            this.saveAppareilsToServer();
 
     }
 
