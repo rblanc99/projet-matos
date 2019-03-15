@@ -57,7 +57,6 @@ L’**utilisateur** peut :
 -	Emprunter du matériel disponible
 -	Rendre du matériel qu’il a lui-même emprunté
 -	Ne peut pas rendre du matériel qu’il n’a pas emprunté lui-même
--	Signaler une erreur sur les informations d’une fiche de matériel
 
 L’**administrateur** peut : 
 -	Modifier les fiches de matériel
