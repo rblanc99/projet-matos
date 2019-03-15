@@ -23,6 +23,13 @@ export class AppareilComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.authService.getCurrentUser();
+    this.index = this.appareilService.appareils.indexOf(
+      this.appareilService.appareils.find(
+        (appareilObject) => {
+          return appareilObject.id === this.id;
+        }
+      )
+    );
   }
 
   onEmprunter() {
