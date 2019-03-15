@@ -8,7 +8,7 @@ import { AppareilService } from '../services/appareil.service';
 })
 export class SearchComponent implements OnInit {
 
-  usersReq: any[];
+  searchReq: any[];
   isSearchOn = false;
 
   constructor(private appareilService: AppareilService) { }
@@ -19,12 +19,12 @@ export class SearchComponent implements OnInit {
   onResearch(form) {
     const req = form.value.search;
     if (req !== '') {
-      const usersReq = this.appareilService.appareils.filter(
+      const searchReq = this.appareilService.appareils.filter(
         (appareilObject) => {
           return appareilObject.nom.slice(0, req.length).toLowerCase() === req.toLowerCase();
         }
       );
-      this.usersReq = usersReq;
+      this.searchReq = searchReq;
       this.isSearchOn = true;
     } else {
       this.isSearchOn = false;
