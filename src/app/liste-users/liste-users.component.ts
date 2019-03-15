@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-users',
@@ -13,7 +14,7 @@ export class ListeUsersComponent implements OnInit {
   usersReq: any[];
   isSearchOn = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private route: Router) { }
 
   ngOnInit() {
     this.users = this.authService.getUsers();
