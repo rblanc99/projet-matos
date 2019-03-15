@@ -25,8 +25,8 @@ Vous pouvez néanmoins le tester en suivant la procédure suivante :
 3) Dans le deuxième : cd back, npm install, npm start
 4) L'URL est : localhost:3000/products
 
-Faute de mieux, j'ai donc utilisé une BDD Firebase de Google, accessible en open à l'adresse suivante : [https://backend-projet-matos.firebaseio.com] (https://backend-projet-matos.firebaseio.com)
-Par exemple [https://backend-projet-matos.firebaseio.com/appareils.json] (https://backend-projet-matos.firebaseio.com/appareils.json)
+Faute de mieux, j'ai donc utilisé une BDD Firebase de Google, accessible en open à l'adresse suivante : [https://backend-projet-matos.firebaseio.com](https://backend-projet-matos.firebaseio.com)
+Par exemple [https://backend-projet-matos.firebaseio.com/appareils.json](https://backend-projet-matos.firebaseio.com/appareils.json)
 
 ## Procédure d'installation 
 
