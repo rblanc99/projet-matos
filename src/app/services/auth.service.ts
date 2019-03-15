@@ -48,7 +48,8 @@ export class AuthService {
     }
 
     deleteUser(id: number) {
-        this.users.splice(id, 1 );
+        const index = this.users.indexOf(this.getUserById(id));
+        this.users.splice(index, 1 );
         this.saveUsersToServer();
     }
 
