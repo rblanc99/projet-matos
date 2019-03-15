@@ -1,0 +1,23 @@
+<h4> Ajouter un utilisateur : </h4>
+<br/>
+
+<form (ngSubmit)="onAddUser(formulaire)" #formulaire="ngForm">
+
+    <div class="row">
+      <label for="prenom">Prénom : </label>
+      <input type="text" id="name" class="validate" name="prenom" required  ngModel>
+    </div>
+
+    <div class="row">
+        <label for="nom">Nom : </label>
+        <input type="text" id="name" class="validate" name="nom" required  ngModel>
+    </div>
+
+    <div class="row">
+        <label for="mail">Mail : </label>
+        <input type="text" id="name" class="validate" name="mail" required ngModel>
+    </div>
+
+
+    <button type="submit" class="btn" [disabled] = "formulaire.invalid" >Enregistrer</button>
+  </form>

@@ -1,0 +1,31 @@
+<h2>{{nom}} </h2>
+
+<div class="row">
+        <p>Vrai nom : {{vrainom}} </p>
+        <p> Statut : <span [ngStyle]="{color: getColor()}">{{getStatus()}}</span> </p>
+</div>
+
+
+
+<div class = "row" *ngIf = "modif" >
+        <input type="text" class="input-field" [(ngModel)]= "nom" placeholder="Nom : ">
+</div>
+
+<div class="row" *ngIf = "modif">
+        <input type="text" class="input-field" [(ngModel)]= "vrainom" placeholder="Vrai nom : ">
+</div>
+
+<div class="row" *ngIf = "modif">
+        <button class="btn col s2 offset-s10" (click)="onDemodifier()"> Valider</button>
+        <h6> Derniere modification  : {{lastUpdate | date : 'dd/mm/yy, HH:mm'}} </h6>
+</div>
+
+<div class="row" *ngIf="isAdmin()">
+    <button class="btn col s2 offset-s10"  *ngIf="!modif" (click)="onModifier()">Modifier</button>
+</div>
+
+<br/>
+
+<button class="row btn" routerLink='/appareils' >Revenir à la liste du matos</button>
+
+

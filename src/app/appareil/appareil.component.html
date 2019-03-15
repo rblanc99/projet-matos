@@ -1,0 +1,82 @@
+
+<li  class="z-depth-5" [ngClass]="{'collection-item':true,
+                                   'light-green accent-2': status,
+                                   'red lighten-2 accent-1': !status}">
+
+  <div class="row">
+
+    <div class="col s2" style= "font-weight: bold">
+        {{name}}
+    </div>
+    <div class="col s3">
+        Statut : <span [ngStyle]="{color: getColor()}">{{getStatus()}}</span>
+    </div>
+    
+    <div *ngIf="isAdmin()" class="right">
+        <button class="btn" (click) = "onDelete()"><i class="material-icons">delete</i></button>
+    </div>
+
+    <div class="right" *ngIf="getAuth()">
+        <button class="btn" *ngIf = "status"(click) ="onEmprunter()">Emprunter</button>
+        <button class="btn" *ngIf="!status && isRendrePossible()" (click)="onRendre()">Rendre</button>
+        &nbsp;
+        <a *ngIf = "getAuth()" [routerLink] = "id">Voir les détails</a>
+        &nbsp;
+    </div>
+    
+    <span *ngIf="!getAuth()">Veuillez vous authentifier pour pouvoir emprunter du matos</span>
+
+    <div *ngIf="getAuth() && !status" class="row">Emprunté par : {{getEmprunteur()}}</div>
+
+  </div>
+
+</li>
+
+
+<!--
+  <table [ngClass]="{'collection-item':true,
+                     'light-green accent-2': status,
+                     'red lighten-2 accent-1': !status}">
+      <tbody>
+        <tr class="row">
+
+          <td class = "col s2" style= "font-weight: bold">{{name}}</td>
+
+          <td class = "col s8">Statut : <span [ngStyle]="{color: getColor()}">{{getStatus()}}</span></td>
+
+          <td *ngIf="getAuth() && !status" class="row">Emprunté par : {{getEmprunteur()}}</td>
+
+          <td class="right" *ngIf="getAuth()">
+              <button class="btn" *ngIf = "status"(click) ="onEmprunter()">Emprunter</button>
+              <button class="btn" *ngIf="!status && isRendrePossible()" (click)="onRendre()">Rendre</button>
+              &nbsp;
+          </td>
+
+          <td *ngIf="!getAuth()">Veuillez vous authentifier pour pouvoir emprunter du matos</td>
+
+          <td *ngIf="isAdmin()" class="right">
+              <a *ngIf = "getAuth()" [routerLink] = "id">Voir les détails</a>
+              &nbsp;
+              <button class="btn" (click) = "onDelete()"><i class="material-icons">delete</i></button>
+          </td>
+
+          
+
+
+        </tr>
+      </tbody>
+    </table>
+
+-->
+
+  
+  
+
+
+    
+
+
+
+
+
+

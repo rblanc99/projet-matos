@@ -1,0 +1,26 @@
+<h3>Rechercher un appareil : </h3>
+<form (ngSubmit) = "onResearch(formulaire)" (input)="onResearch(formulaire)" #formulaire = "ngForm">
+    <div class="input-field row z-depth-3">
+        <i class="material-icons col s1 medium">search</i>
+        <input class ="col s11" id="search" type="search" name="search" required ngModel>
+    </div>
+    
+
+</form>
+
+<div *ngIf = "isSearchOn">
+  <div class="row">
+    <h4>Résultat de la recherche : </h4>
+    <ul class="collection">
+  
+      <app-appareil *ngFor = "let appareil of usersReq, let i = index" 
+                    [name] = "appareil.nom" 
+                    [status] = "appareil.statut" 
+                    [index] = "i"
+                    [id] = "appareil.id"
+                    [emprunterId] = "appareil.emprunterId"
+                    [vrainom]= "appareil.vrainom"></app-appareil>
+
+    </ul>
+  </div> 
+</div>

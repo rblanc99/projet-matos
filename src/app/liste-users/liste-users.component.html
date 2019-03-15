@@ -1,0 +1,66 @@
+<h4>Liste des utilisateurs </h4>
+
+<div class="row">
+
+  <form (ngSubmit) = "onResearch(formulaire)" (input)="onResearch(formulaire)" #formulaire = "ngForm">
+      <div class="input-field row">
+          <i class="material-icons col s1 offset-s3 small">search</i>
+          <input class ="col s5" id="search" type="search" name="search" placeholder="Filtrer..." required ngModel>
+          
+      </div>
+  </form>
+
+</div>
+
+<table *ngIf = "!isSearchOn">
+
+  <thead>
+    <tr>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th> Mail</th>
+      <th class = "right"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of users.slice(1)">
+      <td> {{user.prenom}} </td>
+      <td> {{user.nom}} </td>
+      <td> {{user.mail}} </td>
+      <td *ngIf="isAdmin()"><button class="btn" (click)="onDeleteUser(user)"><i class="material-icons">delete</i></button></td>
+    </tr>
+  </tbody>
+</table>
+
+<table *ngIf="isSearchOn">
+
+    <thead>
+      <tr>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th> Mail</th>
+        <th class = "right"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let user of usersReq">
+        <td> {{user.prenom}} </td>
+        <td> {{user.nom}} </td>
+        <td> {{user.mail}} </td>
+        <td *ngIf="isAdmin()"><button class="btn" (click)="onDeleteUser(user)"><i class="material-icons">delete</i></button></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<br/>
+
+<div class="row">
+  <button class="btn" (click)="onSaveUsers()">Sauvegarder sur le serveur</button>
+  &nbsp;
+  <button class="btn" (click) ="onFetchUsers()">Charger depuis le serveur</button>
+</div>
+
+

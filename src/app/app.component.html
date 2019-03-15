@@ -1,0 +1,43 @@
+<nav class = "nav-extended">
+
+    <div class="nav-wrapper">
+      <a routerLink="/" class="brand-logo center">Hyris</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li routerLinkActive = "active"><a routerLink="appareils">Liste du matos</a></li>
+        <li routerLinkActive = "active"><a routerLink="users">Liste des utilisateurs</a></li>
+        <li routerLinkActive = "active"><a routerLink="auth">Authentification</a></li>
+
+
+      </ul>
+
+      <ul  id="nav-mobile" class="right hide-on-med-and-down">
+        <li *ngIf="isAdmin()" routerLinkActive = "active"><a routerLink="new-appareil">Nouvel appareil</a></li>
+        <li *ngIf="isAdmin()" routerLinkActive = "active"><a routerLink="new-user">Nouvel Utilisateur</a></li>
+        <li *ngIf="!isSearchBarOn" routerLinkActive = "active"><a (click)="onSearch()"><i class="material-icons">search</i></a></li>
+      </ul>
+
+    </div>
+<!--
+    <div class="nav-content">
+        <form *ngIf="isSearchBarOn" (ngSubmit) = "onResearch(formulaire)" #formulaire = "ngForm">
+            <div class="input-field">
+              <input id="search" type="search" name="search" required ngModel>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            </div>
+        </form>
+        <a  *ngIf="isSearchBarOn" class="btn-floating btn-large halfway-fab waves-effect waves-light teal" (click)="onSearch()">
+          <i class="material-icons">clear</i>
+        </a>
+    </div>
+  -->
+</nav>
+
+
+<div  class="container"><router-outlet></router-outlet></div>
+
+
+
+
+
+
+

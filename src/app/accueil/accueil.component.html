@@ -1,0 +1,16 @@
+<div style="text-align:center">
+    <h1>
+      Bienvenue sur  {{ title }}!
+    </h1>
+  </div>
+
+  <div *ngIf = "!isAuth" class="row" style="text-align : center">
+   
+    <h5> 
+      Pour accéder à toutes les fonctionnalités du site : 
+      <br/>
+      <br/>
+      ----------> <button class="btn green" [routerLink] = "['auth']">Connectez-vous</button> <----------
+    </h5>
+
+  </div>

@@ -1,0 +1,26 @@
+<div class="row">
+  <h4> Authentification : </h4>
+</div>
+
+  <form *ngIf = "!authStatus" (ngSubmit)="onSignIn(formulaire)" #formulaire="ngForm">
+
+      <div class="row">
+        <label for="mail">Adresse mail : </label>
+        <input type="text" id="mail" class="validate" name="mail"  required ngModel>
+      </div>
+      
+      <div class="row">
+          <button type="submit" 
+                  class="btn col s6 offset-s3 green" 
+                  *ngIf="!authStatus" 
+                  [disabled] = "formulaire.invalid" >Sign In</button>
+      </div>
+  </form>
+
+      
+
+  <div class="row">
+      <button class="btn col s6 offset-s3 red darken-3" *ngIf="authStatus" (click)="onSignOut()">Sign Out</button>
+  </div>
+
+  <h5 *ngIf = "loading"> Bienvenue, {{getUserFromSignIn()}} </h5>
